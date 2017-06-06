@@ -1,0 +1,19 @@
+{
+	"manifest_version": 2,
+
+	"name": "To Do",  
+	"description": "A simple To Do extension.",
+	"version": "1.0.0",
+
+	"icons": { 
+		"32": "images/icon32.png",
+		"48": "images/icon48.png",
+		"128": "images/icon128.png" 
+	},
+
+	"browser_action": {
+		"default_icon": "images/icon19.png",
+		"default_popup": "popup.html"
+	},
+	"options_page": "options.html"
+}
