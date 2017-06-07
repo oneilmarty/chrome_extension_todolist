@@ -2,10 +2,30 @@
 <html> 
 <head> 
     <title>Popup - To-Do</title> 
-    <link rel="stylesheet" href="css/popup.css" type="text/css" /> 
-    <script src="js/popup.js" type="text/javascript"></script> 
+    <link rel="stylesheet" href="css/popup.css" type="text/css" />
+    <script src="js/libs/jstemplate.js" type="text/javascript"></script>
+    <script src="js/popup.js" type="text/javascript"></script>
 </head> 
-<body> 
-    <h1>Popup</h1> 
-</body> 
+<body style="width: 300px;">
+    <h1>Things To-Do</h1>
+    <div id="results">  
+        <div class="item" jsselect="$this" jsvalues="id:id">
+        <!--
+        	jsselect ( iterate over the variable specified in it—in this case the $this variable )
+        	jsvalues ( can change properties of the element )
+        -->
+            <input type="checkbox" class="completed" checked="checked" jsvalues="checked:completed" />
+        <!--
+        	jsvalues ( can change properties of the element )
+        -->
+            <span class="title" contenteditable="true" jscontent="title"></span>  
+        <!--
+        	contenteditable ( makes it possible to edit the content even though it is not an input or textarea element )
+        	jscontent ( sets the text of the element )
+        -->
+            <button class="remove" title="Remove Task">Remove</button>
+        </div>
+    </div>
+    <input type="text" id="add" placeholder="Write task and press enter..." />
+</body>
 </html>
